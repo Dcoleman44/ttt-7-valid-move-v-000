@@ -1,6 +1,6 @@
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-def position_taken?(board, index)
+def position_taken(board, index)
   if board[index] == "" || board[index] == " " || board[index] == nil
     false
   elsif board[index] == "X" || board[index] == "O"
@@ -8,7 +8,7 @@ def position_taken?(board, index)
   end
 end
 
-def Valid_move?(board, index)
+def Valid_move?(position_taken, index)
   if position_taken? == false && index.between?(0,8) == true
     true
   elsif position_taken? == true || index.between?(0,8) == false
